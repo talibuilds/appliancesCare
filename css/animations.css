@@ -1,0 +1,4 @@
+/* Clean animations css as we removed them from the main layout */
+.reveal {
+  opacity: 1; /* Resetting to fully visible since JS reveal is removed for strict template matching */
+}
