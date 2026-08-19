@@ -760,20 +760,50 @@
     position: relative;
   }
   
-  .form-row {
-    flex-direction: column;
-    gap: 0;
-  }
+  /* Hide header call button on mobile to prevent overlap with logo/menu */
+  .header-call { display: none; }
+  .logo-icon { width: 48px; height: 48px; }
+  .logo-text h1 { font-size: 1.1rem; }
+
+  /* Adjust huge gaps */
+  .hero { padding: 40px 0; }
+  .services-section, .why-choose-us, .reviews-section { padding: 50px 0; }
+
+  /* Fix Typography */
+  .hero-content h1 { font-size: 2.2rem; }
+  .hero-desc { font-size: 1rem; margin-bottom: 20px; }
+  .section-title { font-size: 1.8rem; margin-bottom: 30px; }
+  .stat-content h3 { font-size: 1.5rem; }
   
-  .hero .container { flex-direction: column; }
+  .hero .container { flex-direction: column; text-align: center; }
+  .hero-features { justify-content: center; text-align: left; }
+  .hero-buttons { justify-content: center; }
+  
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .why-features { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
+
+  /* Fix footer bottom overlap */
+  .footer-bottom { 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    gap: 15px; 
+  }
+  .footer-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 480px) {
   .services-grid { grid-template-columns: 1fr; }
   .why-features { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; }
+  
+  .hero-content h1 { font-size: 1.8rem; }
+  .hero-features { grid-template-columns: 1fr; }
+  .hero-buttons { flex-direction: column; width: 100%; }
+  .hero-buttons .btn { width: 100%; text-align: center; justify-content: center; }
 }
