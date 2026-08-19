@@ -120,4 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
       heroOverlay.appendChild(particle);
     }
   }
+
+  // 6. Mobile Menu Toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
 });
